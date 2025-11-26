@@ -4,9 +4,11 @@
  * @author (דניאל בכר,יאיר קוסלובסקי,רון רבי)
  * @version (a version number or a date)
  */
+import java.util.*;
 public class Encryption
 {
     public static void main(String[] args){
+        Scanner reader = new Scanner(System.in);
         System.out.println("Welcome to the Encryption / Decryption Program");
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
         int choice = reader.nextInt();
