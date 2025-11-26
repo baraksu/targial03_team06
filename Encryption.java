@@ -46,7 +46,5 @@ public class Encryption
         }
         else
             System.out.println(choice +" is not a valid choice");
-    public static int add (int a, int b){
-        return a+b;
     }
 }
