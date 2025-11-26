@@ -24,7 +24,7 @@ public class Encryption
                 //דניאל בכר
             }
             else{
-                System.out.println(sentence + "contains more than 3 words")
+                System.out.println(sentence + "contains more than 3 words");
             }
         }
         else if (choice == 2){
@@ -41,7 +41,7 @@ public class Encryption
                 //דניאל בכר
             }
             else{
-                System.out.println(sentence + "contains more than 3 words")
+                System.out.println(sentence + "contains more than 3 words");
             }
         }
         else
