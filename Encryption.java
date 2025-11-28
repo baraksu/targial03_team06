@@ -7,6 +7,10 @@
 import java.util.*;
 public class Encryption
 {
+    public static int add (int a, int b){
+        
+        return a+b;
+    }
     public static void main(String[] args){
         Scanner reader = new Scanner(System.in);
         System.out.println("Welcome to the Encryption / Decryption Program");
