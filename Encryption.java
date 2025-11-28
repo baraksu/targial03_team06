@@ -9,7 +9,7 @@ public class Encryption
 {
     public static int add (int a, int b){
         
-        return a+b;
+        return a+b+1;
     }
     public static void main(String[] args){
         Scanner reader = new Scanner(System.in);
