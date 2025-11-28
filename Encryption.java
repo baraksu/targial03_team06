@@ -16,10 +16,15 @@ public class Encryption
         System.out.println("Welcome to the Encryption / Decryption Program");
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
         int choice = reader.nextInt();
+        reader.nextLine();
+        System.out.println("Enter up to three words sentence");
         if (choice == 1){
-            System.out.println("Enter up to three words sentence");
             String sentence = reader.nextLine();
-            int countWords = sentence.split("\\s").length;
+            int lenBefore = sentence.length();
+            String sentence2 = sentence.replace(" ","");
+            int lenAfter = sentence2.length();
+            int countWords = lenBefore-lenAfter+1;
+            System.out.println(countWords);
             if (countWords == 1){
                 //יאיר קוסלובסקי
             }
@@ -27,10 +32,11 @@ public class Encryption
                 //רון רבי
             }
             else if (countWords == 3){
-                //דניאל בכר
+                sentence = Encript3(sentence);
+                System.out.println(sentence);
             }
             else{
-                System.out.println(sentence + "contains more than 3 words");
+                System.out.println(sentence + " contains more than 3 words");
             }
         }
         else if (choice == 2){
@@ -44,7 +50,7 @@ public class Encryption
                 //רון רבי
             }
             else if (countWords == 3){
-                //דניאל בכר
+            //דניאל בכר
             }
             else{
                 System.out.println(sentence + "contains more than 3 words");
@@ -52,5 +58,11 @@ public class Encryption
         }
         else
             System.out.println(choice +" is not a valid choice");
+    }
+    public static String Encript3 (String sentence){
+        String word12 = sentence.substring(0,sentence.lastIndexOf(' '));
+        String word3 = sentence.substring(sentence.lastIndexOf(' ')+1);
+        sentence = word3 + ' ' + word12;
+        return sentence;
     }
 }
