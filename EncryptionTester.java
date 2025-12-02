@@ -15,7 +15,18 @@ public class EncryptionTester
         
         int result = Encryption.add(2,3);
         assertEquals(6,result);
-        
+        String result1 = Encription.main(1,"Hi there you beep")
+        assertEquals(result1,"Hi there you beep contains more than three words");
+        String result1 = Encription.main(1,"Hello there you beep")
+        assertEquals(result1,"Hello there you beep contains more than three words");
+        String result1 = Encription.main(2,"Hi there you beep")
+        assertEquals(result1,"Hi there you beep contains more than three words");
+        String result1 = Encription.main(2,"Hello there you beep")
+        assertEquals(result1,"Hello there you beep contains more than three words");
+        String result1 = Encription.main(3)
+        assertEquals(result1,"3 is not a valid choice");
+        String result1 = Encription.main(4)
+        assertEquals(result1,"4 is not a valid choice");
     }
     
 }
