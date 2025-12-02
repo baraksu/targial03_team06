@@ -115,8 +115,8 @@ public class Encryption
     sentence = secondW +(" ") + firstW;
 
     int len = sentence.length();
-    String splitW1 = sentence.substring(2);
-    String splitW2 = sentence.substring(0, 2);
+    String splitW1 = sentence.substring(0, 2);
+    String splitW2 = sentence.substring(0);
     sentence = splitW1 +" "+splitW2;
     sentence = sentence.replace('#', 'e');
     sentence = sentence.replace('@', 'a');
