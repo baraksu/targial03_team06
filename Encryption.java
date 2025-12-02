@@ -45,7 +45,7 @@ public class Encryption
                 //יאיר קוסלובסקי
             }
             else if (countWords == 2){
-               sentence = Decrypt2 (sentence); 
+               sentence =  Decrypt2(sentence); 
                 //רון רבי
             }
             else if (countWords == 3){
