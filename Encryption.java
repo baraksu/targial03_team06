@@ -109,12 +109,11 @@ public class Encryption
     return sentence;
     }
     public static String Decrypt2(String sentence){
-          sentence = sentence.replace('#', 'e');
+    sentence = sentence.replace('#', 'e');
     sentence = sentence.replace('@', 'a');
     sentence = sentence.replace('&', 'u');
     sentence = sentence.replace('0', 'o');
     sentence = sentence.replace('1', 'i');
-    int len = sentence.length();
     String splitW1 = sentence.substring(2);
     String splitW2 = sentence.substring(0, 2);
     sentence = splitW1 +splitW2;
