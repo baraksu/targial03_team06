@@ -11,6 +11,7 @@ public class Encryption
         
         return a+b+1;
     }
+    // דניאל בכר
     public static void main(String[] args){
         Scanner reader = new Scanner(System.in);
         System.out.println("Welcome to the Encryption / Decryption Program");
@@ -31,8 +32,8 @@ public class Encryption
                 //רון רבי
             }
             else if (countWords == 3){
+                // דניאל בכר
                 sentence = Encript3(sentence);
-                System.out.println(sentence);
             }
             else{
                 System.out.println(sentence + " contains more than 3 words");
@@ -46,7 +47,8 @@ public class Encryption
                 //רון רבי
             }
             else if (countWords == 3){
-            //דניאל בכר
+            // דניאל בכר
+            sentence = Decript3(sentence);
             }
             else{
                 System.out.println(sentence + "contains more than 3 words");
@@ -55,33 +57,36 @@ public class Encryption
         else
             System.out.println(choice +" is not a valid choice");
     }
+    // דניאל בכר
     public static String Encript3 (String sentence){
         String word12 = sentence.substring(0,sentence.lastIndexOf(' '));
         String word3 = sentence.substring(sentence.lastIndexOf(' ')+1);
         sentence = word3 + ' ' + word12;
         String lastThreeLetters = sentence.substring(sentence.length()-3);
-        String allButLastThreeLetters = sentence.substring(0,sentence.length()-4);
+        String allButLastThreeLetters = sentence.substring(0,sentence.length()-3);
         sentence = lastThreeLetters + allButLastThreeLetters;
         sentence = sentence.replace('a','@');
         sentence = sentence.replace('e','#');
         sentence = sentence.replace('i','1');
         sentence = sentence.replace('o','0');
         sentence = sentence.replace('u','&');
+        System.out.println(sentence);
         return sentence;
     }
+    // דניאל בכר
     public static String Decript3 (String sentence){
-        sentence = sentence.replace('a','@');
-        sentence = sentence.replace('e','#');
-        sentence = sentence.replace('i','1');
-        sentence = sentence.replace('o','0');
-        sentence = sentence.replace('u','&');
-        String word12 = sentence.substring(0,sentence.lastIndexOf(' '));
-        String word3 = sentence.substring(sentence.lastIndexOf(' ')+1);
-        sentence = word3 + ' ' + word12;
-        String lastThreeLetters = sentence.substring(sentence.length()-3);
-        String allButLastThreeLetters = sentence.substring(0,sentence.length()-4);
-        sentence = lastThreeLetters + allButLastThreeLetters;
-
+        sentence = sentence.replace('@','a');
+        sentence = sentence.replace('#','e');
+        sentence = sentence.replace('1','i');
+        sentence = sentence.replace('0','o');
+        sentence = sentence.replace('&','u');
+        String firstThreeLetters = sentence.substring(0,3);
+        String allButFirstThreeLetters = sentence.substring(3);
+        sentence = allButFirstThreeLetters + firstThreeLetters;
+        String word1 = sentence.substring(0,sentence.indexOf(' '));
+        String word23 = sentence.substring(sentence.indexOf(' ')+1);
+        sentence = word23 + ' ' + word1;
+        System.out.println(sentence);
         return sentence;
     }
 }
