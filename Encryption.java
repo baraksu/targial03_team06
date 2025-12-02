@@ -104,6 +104,7 @@ public class Encryption
                sentence = sentence.replace('a', '@');
                sentence = sentence.replace('u', '&');
                sentence = sentence.replace('o', '0');
+            sentence = sentence.replace('i', '1');
                System.out.println("The encrypt sentence is:" +sentence);
                return sentence;
 }
@@ -120,6 +121,7 @@ public class Encryption
                sentence = sentence.replace('@', 'a');
                sentence = sentence.replace('&', 'u');
                sentence = sentence.replace('0', 'o');
+        sentence = sentence.replace('1', 'i');
                System.out.println("The Decript sentence is:" +sentence);  
                return sentence;
 }
