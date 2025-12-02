@@ -123,6 +123,7 @@ public class Encryption
     sentence = sentence.replace('&', 'u');
     sentence = sentence.replace('0', 'o');
     sentence = sentence.replace('1', 'i');
+         System.out.println("The dycript sentence is:" + sentence);
     return sentence;
     }
 }
