@@ -112,11 +112,11 @@ public class Encryption
     int repWords = sentence.indexOf(" ");
     String firstW = sentence.substring(0, repWords);
     String secondW = sentence.substring(repWords + 1);
-    sentence = secondW +(" ") + firstW;
+    sentence = secondW + firstW;
 
     int len = sentence.length();
-    String splitW1 = sentence.substring(0, 2);
-    String splitW2 = sentence.substring(0);
+    String splitW1 = sentence.substring(0);
+    String splitW2 = sentence.substring(0, 2);
     sentence = splitW1 +" "+splitW2;
     sentence = sentence.replace('#', 'e');
     sentence = sentence.replace('@', 'a');
