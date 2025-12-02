@@ -60,5 +60,78 @@ public class EncryptionTester
         String result = Encryption.Decript3("c0bB#h@r D@n1#l J@");
         assertEquals(result,"Daniel Jacob Behar");
     }
+    @Test
+    public void test11(){
+        
+        String result = Encryption.Encript2("ron arabi");
+        assertEquals("0n@r@b1 r",result);
+        
+    }
+    @Test
+    public void test12(){
+        
+        String result = Encryption.Encript2("ron rabi");
+        assertEquals("0nr@b1 r",result);
+        
+    }
+    @Test
+    public void test13(){
+        
+        String result = Encryption.Encript2("dan hen");
+        assertEquals("@nh#n d",result);
+        
+    }
+    @Test
+    public void test14(){
+        
+        String result = Encryption.Encript2("shay rob");
+        assertEquals("@yr0b sh",result);
+        
+    }
+    @Test
+    public void test15(){
+        
+        String result = Encryption.Encript2("idan ganz");
+        assertEquals("@ng@nz 1d",result);
+        
+    }
+     @Test
+    public void test16(){
+        
+        String result = Encryption.Decrypt2("@ng@nz 1d");
+        assertEquals("idan ganz",result);
+        
+    }
+     @Test
+    public void test17(){
+        
+        String result = Encryption.Decrypt2("@yr0b sh");
+        assertEquals("shay rob",result);
+        
+    }
+     @Test
+    public void test18(){
+        
+        String result = Encryption.Decrypt2("@nh#n d");
+        assertEquals("dan hen",result);
+        
+    }
+     @Test
+    public void test19(){
+        
+        String result = Encryption.Decrypt2("0nr@b1 r");
+        assertEquals("ron rabi",result);
+        
+    }
+     @Test
+    public void test20(){
+        
+        String result = Encryption.Decrypt2("ron abrabi");
+        assertEquals("abrabiro n",result);
+        
+    }
+    
+}
+
     
 }
