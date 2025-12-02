@@ -114,15 +114,15 @@ public class Encryption
     sentence = sentence.replace('&', 'u');
     sentence = sentence.replace('0', 'o');
     sentence = sentence.replace('1', 'i');
-          int len = sentence.length();
+    int len = sentence.length();
     String splitW1 = sentence.substring(2);
     String splitW2 = sentence.substring(0, 2);
-    sentence = splitW1 +" "+splitW2;
+    sentence = splitW1 +splitW2;
   
     int repWords = sentence.indexOf(" ");
     String firstW = sentence.substring(0, repWords);
     String secondW = sentence.substring(repWords + 1);
-    sentence = secondW + firstW;
+    sentence = secondW +" "+ firstW;
 
   
          System.out.println("The dycript sentence is:" + sentence);
