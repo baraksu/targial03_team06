@@ -92,37 +92,37 @@ public class Encryption
         return sentence;
     }
       public static String Encript2 (String sentence){
-        int  replaceWords = sentence.indexOf(" ");
-                String first = sentence.substring(0, replaceWords);
-                String second = sentence.substring(replaceWords + 1);
-               sentence = second +(" ")+ first;
-               int len = sentence.length();
-               String moveW = sentence.substring(len - 2);
-               String dontM = sentence.substring(0, len - 2);
-             sentence = moveW + dontM;
-               sentence = sentence.replace('e', '#');
-               sentence = sentence.replace('a', '@');
-               sentence = sentence.replace('u', '&');
-               sentence = sentence.replace('o', '0');
-            sentence = sentence.replace('i', '1');
-               System.out.println("The encrypt sentence is:" +sentence);
-               return sentence;
-}
-    public static String Decript2 (String sentence){
-    int  repWords = sentence.indexOf(" ");
-                String firstW = sentence.substring(0, repWords);
-                String secondW = sentence.substring(repWords + 1);
-               sentence = secondW +(" ")+ firstW;
-               int len = sentence.length();
-               String splitW1 = sentence.substring(2);
-               String splitW2 = sentence.substring(0, 2);
-                sentence = splitW1 +" "+splitW2;
-  sentence = sentence.replace('#', 'e');
-               sentence = sentence.replace('@', 'a');
-               sentence = sentence.replace('&', 'u');
-               sentence = sentence.replace('0', 'o');
-        sentence = sentence.replace('1', 'i');
-               System.out.println("The Decript sentence is:" +sentence);  
-               return sentence;
-}
+    int replaceWords = sentence.indexOf(" ");
+    String first = sentence.substring(0, replaceWords);
+    String second = sentence.substring(replaceWords + 1);
+    sentence = second + " " + first;
+    int len = sentence.length();
+    String moveW = sentence.substring(len - 2);
+    String dontM = sentence.substring(0, len - 2);
+    sentence = moveW + dontM;
+    sentence = sentence.replace('e', '#');
+    sentence = sentence.replace('a', '@');
+    sentence = sentence.replace('u', '&');
+    sentence = sentence.replace('o', '0');
+    sentence = sentence.replace('i', '1');
+    System.out.println("The encrypt sentence is:" + sentence);
+    return sentence;
+    }
+    public static String Decrypt2(String sentence){
+    int repWords = sentence.indexOf(" ");
+    String firstW = sentence.substring(0, repWords);
+    String secondW = sentence.substring(repWords + 1);
+    sentence = secondW +(" ") + firstW;
+
+    int len = sentence.length();
+    String splitW1 = sentence.substring(2);
+    String splitW2 = sentence.substring(0, 2);
+    sentence = splitW1 +" "+splitW2;
+    sentence = sentence.replace('#', 'e');
+    sentence = sentence.replace('@', 'a');
+    sentence = sentence.replace('&', 'u');
+    sentence = sentence.replace('0', 'o');
+    sentence = sentence.replace('1', 'i');
+    return sentence;
+    }
 }
