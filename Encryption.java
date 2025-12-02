@@ -30,6 +30,7 @@ public class Encryption
             }
             else if (countWords == 2){
                 //רון רבי
+                sentence = Encript2(sentence);
             }
             else if (countWords == 3){
                 // דניאל בכר
@@ -89,4 +90,20 @@ public class Encryption
         System.out.println(sentence);
         return sentence;
     }
+      public static String Encript2 (String sentence){
+        int  replaceWords = sentence.indexOf(" ");
+                String first = sentence.substring(0, replaceWords);
+                String second = sentence.substring(replaceWords + 1);
+               sentence = second +(" ")+ first;
+               int len = sentence.length();
+               String moveW = sentence.substring(len - 2);
+               String dontM = sentence.substring(0, len - 2);
+               sentence = moveW +" "+dontM;
+               sentence = sentence.replace('e', '#');
+               sentence = sentence.replace('a', '@');
+               sentence = sentence.replace('u', '&');
+               sentence = sentence.replace('o', '0');
+               System.out.println("The encrypt sentence is:" +sentence);
+               return sentence;
+}
 }
