@@ -99,7 +99,7 @@ public class Encryption
                int len = sentence.length();
                String moveW = sentence.substring(len - 2);
                String dontM = sentence.substring(0, len - 2);
-               sentence = moveW +" "+dontM;
+             sentence = moveW + dontM;
                sentence = sentence.replace('e', '#');
                sentence = sentence.replace('a', '@');
                sentence = sentence.replace('u', '&');
