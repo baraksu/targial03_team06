@@ -45,6 +45,7 @@ public class Encryption
                 //יאיר קוסלובסקי
             }
             else if (countWords == 2){
+               sentence = Decript2 (sentence); 
                 //רון רבי
             }
             else if (countWords == 3){
@@ -104,6 +105,22 @@ public class Encryption
                sentence = sentence.replace('u', '&');
                sentence = sentence.replace('o', '0');
                System.out.println("The encrypt sentence is:" +sentence);
+               return sentence;
+}
+    public static String Decript2 (String sentence){
+    int  repWords = sentence.indexOf(" ");
+                String firstW = sentence.substring(0, repWords);
+                String secondW = sentence.substring(repWords + 1);
+               sentence = secondW +(" ")+ firstW;
+               int len = sentence.length();
+               String splitW1 = sentence.substring(2);
+               String splitW2 = sentence.substring(0, 2);
+                sentence = splitW1 +" "+splitW2;
+  sentence = sentence.replace('#', 'e');
+               sentence = sentence.replace('@', 'a');
+               sentence = sentence.replace('&', 'u');
+               sentence = sentence.replace('0', 'o');
+               System.out.println("The Decript sentence is:" +sentence);  
                return sentence;
 }
 }
