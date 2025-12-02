@@ -20,15 +20,15 @@ public class EncryptionTester
         assertEquals(result,"#r#y0& H1 th");
     }@Test
     public void testAdd1(){
-        String result = Encription.Encript3(1,"Hello there you");
+        String result = Encription.Encript3("Hello there you");
         assertEquals(result,"#r#y0& H#ll0 th");
     }@Test
     public void testAdd2(){
-        String result = Encription.Encript3(2,"Daniel Jacob Behar");
+        String result = Encription.Encript3("Daniel Jacob Behar");
         assertEquals(result,"c0bB#h@r D@n1#l J@");
     }@Test
     public void testAdd3(){
-        String result = Encription.Encript3(2,"Daniel my name");
+        String result = Encription.Encript3("Daniel my name");
         assertEquals(result," myn@m# D@n1#l");
     }@Test
     public void testAdd4(){
