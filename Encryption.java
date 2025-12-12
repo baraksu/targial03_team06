@@ -26,7 +26,16 @@ public class Encryption
         int countWords = lenBefore-lenAfter+1;
         if (choice == 1){
             if (countWords == 1){
-                //יאיר קוסלובסקי
+                char last = word.charAt(word.length() - 1);      // האות האחרונה
+                String rest = word.substring(0, word.length() - 1); // כל שאר האותיות
+                String Word = last + rest; // משרשר את התו האחרון עם שאר המילה
+                 Word = Word.replace('@','a');
+                 Word = Word.replace('#','e');
+                 Word = Word.replace('1','i');
+                 Word = Word.replace('0','o');
+                 Word = Word.replace('&','u');
+                System.out.println("The encypted word is"+ Word);
+                return
             }
             else if (countWords == 2){
                 //רון רבי
