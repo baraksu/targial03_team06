@@ -26,7 +26,16 @@ public class Encryption
         int countWords = lenBefore-lenAfter+1;
         if (choice == 1){
             if (countWords == 1){
-                //יאיר קוסלובסקי
+                char lastChar = sentence.charAt(sentence.length() - 1);
+                String rest = sentence.substring(0, sentence.length() - 1);
+                String result = lastChar + rest;
+                result = result.replace('a','@');
+                result = result.replace('e','#');
+                result = result.replace('i','1');
+                result = result.replace('o','0');
+                result = result.replace('u','&');
+                System.out.println("המילה המוצפנת: " + result);
+                return;
             }
             else if (countWords == 2){
                 //רון רבי
@@ -42,7 +51,16 @@ public class Encryption
         }
         else if (choice == 2){
             if (countWords == 1){
-                //יאיר קוסלובסקי
+                sentence = sentence.replace('a','@');
+                sentence = sentence.replace('e','#');
+                sentence = sentence.replace('i','1');
+                sentence = sentence.replace('o','0');
+                sentence = sentence.replace('u','&');
+                char firstChar = sentence.charAt(0);
+                String rest = sentence.substring(1);
+                String result = rest + firstChar;
+                System.out.println("המילה המפוענחת " + result);
+                return;
             }
             else if (countWords == 2){
                sentence =  Decrypt2(sentence); 
