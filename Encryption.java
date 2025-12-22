@@ -27,6 +27,7 @@ public class Encryption
         if (choice == 1){
             if (countWords == 1){
                 //יאיר קוסלובסקי
+                sentence =  Encrypt1(sentence); 
             }
             else if (countWords == 2){
                 //רון רבי
@@ -43,6 +44,7 @@ public class Encryption
         else if (choice == 2){
             if (countWords == 1){
                 //יאיר קוסלובסקי
+                sentence =  Decrypt1(sentence); 
             }
             else if (countWords == 2){
                sentence =  Decrypt2(sentence); 
@@ -92,39 +94,60 @@ public class Encryption
         return sentence;
     }
       public static String Encript2 (String sentence){
-    int replaceWords = sentence.indexOf(" ");
-    String first = sentence.substring(0, replaceWords);
-    String second = sentence.substring(replaceWords + 1);
-    sentence = second + " " + first;
-    int len = sentence.length();
-    String moveW = sentence.substring(len - 2);
-    String dontM = sentence.substring(0, len - 2);
-    sentence = moveW + dontM;
-    sentence = sentence.replace('e', '#');
-    sentence = sentence.replace('a', '@');
-    sentence = sentence.replace('u', '&');
-    sentence = sentence.replace('o', '0');
-    sentence = sentence.replace('i', '1');
-    System.out.println("The encrypt sentence is:" + sentence);
-    return sentence;
+        int replaceWords = sentence.indexOf(" ");
+         String first = sentence.substring(0, replaceWords);
+        String second = sentence.substring(replaceWords + 1);
+        sentence = second + " " + first;
+        int len = sentence.length();
+        String moveW = sentence.substring(len - 2);
+        String dontM = sentence.substring(0, len - 2);
+        sentence = moveW + dontM;
+        sentence = sentence.replace('e', '#');
+        sentence = sentence.replace('a', '@');
+        sentence = sentence.replace('u', '&');
+        sentence = sentence.replace('o', '0');
+        sentence = sentence.replace('i', '1');
+        System.out.println("The encrypt sentence is:" + sentence);
+        return sentence;
     }
     public static String Decrypt2(String sentence){
-    sentence = sentence.replace('#', 'e');
-    sentence = sentence.replace('@', 'a');
-    sentence = sentence.replace('&', 'u');
-    sentence = sentence.replace('0', 'o');
-    sentence = sentence.replace('1', 'i');
-    String splitW1 = sentence.substring(2);
-    String splitW2 = sentence.substring(0, 2);
-    sentence = splitW1 +splitW2;
-  
-    int repWords = sentence.indexOf(" ");
-    String firstW = sentence.substring(0, repWords);
-    String secondW = sentence.substring(repWords + 1);
-    sentence = secondW +" "+ firstW;
-
-  
-         System.out.println("The dycript sentence is:" + sentence);
-    return sentence;
+        sentence = sentence.replace('#', 'e');
+        sentence = sentence.replace('@', 'a');
+        sentence = sentence.replace('&', 'u');
+        sentence = sentence.replace('0', 'o');
+        sentence = sentence.replace('1', 'i');
+        String splitW1 = sentence.substring(2);
+        String splitW2 = sentence.substring(0, 2);
+        sentence = splitW1 +splitW2;
+        int repWords = sentence.indexOf(" ");
+        String firstW = sentence.substring(0, repWords);
+        String secondW = sentence.substring(repWords + 1);
+        sentence = secondW +" "+ firstW;
+        System.out.println("The dycript sentence is:" + sentence);
+        return sentence;
+    }
+    public static String Encript1 (String sentence){
+        char lastChar = sentence.charAt(sentence.length() - 1);
+        String rest = sentence.substring(0, sentence.length() - 1)
+        String result = lastChar + rest;
+        result = result.replace('a','@');
+        result = result.replace('e','#');
+        result = result.replace('i','1');
+        result = result.replace('o','0');
+        result = result.replace('u','&');
+        System.out.println("המילה המוצפנת: " + result);
+        return result;
+    }
+    public static String Decript1 (String sentence){
+        sentence = sentence.replace('a','@');
+        sentence = sentence.replace('e','#');
+        sentence = sentence.replace('i','1');
+        sentence = sentence.replace('o','0');
+        sentence = sentence.replace('u','&');
+        char firstChar = sentence.charAt(0);
+        String rest = sentence.substring(1);
+        String result = rest + firstChar;
+        System.out.println("המילה המפוענחת " + result);
+        return result;
     }
 }
