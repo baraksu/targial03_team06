@@ -27,7 +27,7 @@ public class Encryption
         if (choice == 1){
             if (countWords == 1){
                 //יאיר קוסלובסקי
-                sentence =  Encrypt1(sentence); 
+                sentence =  Encript1(sentence); 
             }
             else if (countWords == 2){
                 //רון רבי
@@ -44,7 +44,7 @@ public class Encryption
         else if (choice == 2){
             if (countWords == 1){
                 //יאיר קוסלובסקי
-                sentence =  Decrypt1(sentence); 
+                sentence =  Decript1(sentence); 
             }
             else if (countWords == 2){
                sentence =  Decrypt2(sentence); 
@@ -128,7 +128,7 @@ public class Encryption
     }
     public static String Encript1 (String sentence){
         char lastChar = sentence.charAt(sentence.length() - 1);
-        String rest = sentence.substring(0, sentence.length() - 1)
+        String rest = sentence.substring(0, sentence.length() - 1);
         String result = lastChar + rest;
         result = result.replace('a','@');
         result = result.replace('e','#');
@@ -139,11 +139,11 @@ public class Encryption
         return result;
     }
     public static String Decript1 (String sentence){
-        sentence = sentence.replace('a','@');
-        sentence = sentence.replace('e','#');
-        sentence = sentence.replace('i','1');
-        sentence = sentence.replace('o','0');
-        sentence = sentence.replace('u','&');
+        sentence = sentence.replace('#', 'e');
+        sentence = sentence.replace('@', 'a');
+        sentence = sentence.replace('&', 'u');
+        sentence = sentence.replace('0', 'o');
+        sentence = sentence.replace('1', 'i');
         char firstChar = sentence.charAt(0);
         String rest = sentence.substring(1);
         String result = rest + firstChar;
