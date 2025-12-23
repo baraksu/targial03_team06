@@ -18,7 +18,7 @@ public class Encryption
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
         int choice = reader.nextInt();
         reader.nextLine();
-        System.out.println("Enter up to three words sentence");
+        System.out.println("Enter up to three words sentence:");
         String sentence = reader.nextLine();
         int lenBefore = sentence.length();
         String sentence2 = sentence.replace(" ","");
@@ -107,7 +107,7 @@ public class Encryption
         sentence = sentence.replace('u', '&');
         sentence = sentence.replace('o', '0');
         sentence = sentence.replace('i', '1');
-        System.out.println("The encrypt sentence is:" + sentence);
+        System.out.println(sentence);
         return sentence;
     }
     public static String Decrypt2(String sentence){
@@ -123,7 +123,7 @@ public class Encryption
         String firstW = sentence.substring(0, repWords);
         String secondW = sentence.substring(repWords + 1);
         sentence = secondW +" "+ firstW;
-        System.out.println("The dycript sentence is:" + sentence);
+        System.out.println(sentence);
         return sentence;
     }
     public static String Encript1 (String sentence){
@@ -135,7 +135,7 @@ public class Encryption
         result = result.replace('i','1');
         result = result.replace('o','0');
         result = result.replace('u','&');
-        System.out.println("המילה המוצפנת: " + result);
+        System.out.println(result);
         return result;
     }
     public static String Decript1 (String sentence){
@@ -147,7 +147,7 @@ public class Encryption
         char firstChar = sentence.charAt(0);
         String rest = sentence.substring(1);
         String result = rest + firstChar;
-        System.out.println("המילה המפוענחת " + result);
+        System.out.println(result);
         return result;
     }
 }
