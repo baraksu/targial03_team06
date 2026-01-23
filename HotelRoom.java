@@ -87,7 +87,7 @@ public class HotelRoom {
     }
     
     public boolean checkIn(String guest) {
-        if (!isOccupied()){
+        if (!isOccupied()) {
             _occupied = true;
             _guest = guest;
             return true;
